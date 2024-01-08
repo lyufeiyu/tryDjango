@@ -1,6 +1,40 @@
 - [Preface](#preface)
 - [Installing to Get Started](#installing-to-get-started)
 - [Setup your Virtual Environment for Django](#setup-your-virtual-environment-for-django)
+- [Create a Blank Django Project](#create-a-blank-django-project)
+- [Setup Your Code Text Editor](#setup-your-code-text-editor)
+- [Settings](#settings)
+- [Built-In Components](#built-in-components)
+- [Your First App Component](#your-first-app-component)
+- [Create Product Objects in the Python Shell](#create-product-objects-in-the-python-shell)
+- [New Model Fields](#new-model-fields)
+- [Change a Model](#change-a-model)
+- [Default Homepage to Custom Homepage](#default-homepage-to-custom-homepage)
+- [URL Routing and Requests](#url-routing-and-requests)
+- [Django Templates and Django Templating Engine Basics](#django-templates-and-django-templating-engine-basics)
+- [Include Template Tag and Rendering Context in a Template](#include-template-tag-and-rendering-context-in-a-template)
+- [For Loop in a Template and Using Conditions in a Template](#for-loop-in-a-template-and-using-conditions-in-a-template)
+- [Render Data from the Database with a Model](#render-data-from-the-database-with-a-model)
+- [How Django Templates Load with Apps](#how-django-templates-load-with-apps)
+- [Django Model Forms](#django-model-forms)
+- [Raw HTML Form and Pure Django Form](#raw-html-form-and-pure-django-form)
+- [Form Widgets](#form-widgets)
+- [Form Validation Methods](#form-validation-methods)
+- [Initial Values for Forms](#initial-values-for-forms)
+- [Dynamic URL Routing](#dynamic-url-routing)
+- [Handle DoesNotExist](#handle-doesnotexist)
+- [Delete and Confirm](#delete-and-confirm)
+- [View of a List of Database Objects](#view-of-a-list-of-database-objects)
+- [Dynamic Linking of URLs](#dynamic-linking-of-urls)
+- [Django URLs Reverse](#django-urls-reverse)
+- [In App URLs and Namespacing](#in-app-urls-and-namespacing)
+- [Class Based Views - ListView DetailView CreateView and UpdateView DeleteView](#class-based-views---listview-detailview-createview-and-updateview-deleteview)
+- [Function Based View to Class Based View](#function-based-view-to-class-based-view)
+- [Raw Detail Raw List Raw Create Raw Update And Raw Delete Class Based View](#raw-detail-raw-list-raw-create-raw-update-and-raw-delete-class-based-view)
+- [Form Validation on a Post Method](#form-validation-on-a-post-method)
+- [Custom Mixin for Class Based Views](#custom-mixin-for-class-based-views)
+- [Various Notes](#various-notes)
+
 ## Preface
 I am studying a basic Django course on YouTube, and the course link is https://www.youtube.com/watch?v=F5mRW0jo-U4&t=375s. This GitHub repository contains the code I have written while learning the course, and the notes are written after I completed the course. The purpose of this repository is twofold: first, to document the key points of the course, and second, to provide notes to friends who are also learning the course so that they can learn quickly.
 ## Installing to Get Started
@@ -334,7 +368,7 @@ In this example, there are a few URL patterns defined:
 ###### Dynamic URL Patterns
 <p>Django can handle dynamic URL routing using path converters. For example, in the pattern products/< int:product_id >/, < int:product_id > is a path converter that matches one or more digits and passes them as an integer to the view function.</p>
 
-## Django Templates && Django Templating Engine Basics
+## Django Templates and Django Templating Engine Basics
 Django templates are a key component of the Django web framework, allowing for a separation between the presentation layer (HTML/CSS) and the business logic (Python code). Django's templating engine provides a powerful way to control how data is displayed.
 #### Django Templates
 A Django template is a text file defining the structure or layout of a file (like an HTML page), with placeholders used to represent actual content. These placeholders are represented by template tags and variables.
@@ -410,7 +444,7 @@ Base template (base.html):
 #### Configuration
 The Django templating engine needs to be configured in the settings.py file of your project. By default, Django is already set up to use its templating engine, but you can customize various options like directories where templates are stored, template context processors, etc.
 This system allows for the creation of dynamic, data-driven websites with complex layouts and formatting, without mixing Python code into the HTML content, promoting a clean separation of concerns.
-## Include Template Tag && Rendering Context in a Template
+## Include Template Tag and Rendering Context in a Template
 The __{% include %}__ tag allows you to include one template inside another. This is particularly useful for reusing common parts of your HTML, like headers, footers, or navigation bars, across different pages of your website.
 For example, if you have a navigation bar defined in a file named _navbar.html, you can include it in other templates like this:
 ```html
@@ -455,7 +489,7 @@ Context variables are also available in child templates that inherit from a pare
 
 By using the __{% include %}__ tag and rendering context in templates, you can create a dynamic and maintainable structure for your Django application's frontend, ensuring that the Python code used to generate context data is kept separate from the HTML markup.
 
-## For Loop in a Template && Using Conditions in a Template
+## For Loop in a Template and Using Conditions in a Template
 The __{% for %}__ template tag allows you to iterate over a sequence (like a list or queryset) and render a block of HTML for each item in the sequence. Here’s an example:
 ```python
 def my_view(request):
@@ -578,7 +612,7 @@ Create a template to display the form. Django forms can auto-generate form field
 #### Step 5: Handling Errors
 Model forms also handle form validation. If the form is not valid, it will populate the form.errors dictionary, which you can display in your template.
 
-## Raw HTML Form && Pure Django Form
+## Raw HTML Form and Pure Django Form
 #### Raw HTML Form
 A raw HTML form is a straightforward way to create a form using standard HTML form elements. This method gives you complete control over the form's appearance and structure, but requires more manual setup for handling form submissions and validation.
 Example
