@@ -50,7 +50,7 @@ pip install django
 django-admin --version
 ```
 ```bash
-pip freeze
+pip freeze 
 ```
 ## Setup your Virtual Environment for Django
 ~~~
