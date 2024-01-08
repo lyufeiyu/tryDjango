@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="." method="POST">    
+	{% csrf_token %}
+	{{ form.as_p }}      <!-- p是html的p标签 -->
+	<input type="submit" value="Save" />	
+</form>
+
+{% endblock %}

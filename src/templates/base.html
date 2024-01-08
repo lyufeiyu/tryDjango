@@ -1,0 +1,21 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Coding for Entrepreneurs is doing Try Django</title>
+</head>
+<body>
+	<!-- <h1>This is a navbar </h1> -->
+	{% include 'navbar.html' %}
+
+	{% block content %}
+		replace content
+	{% endblock %}
+
+	{% block content_main %}
+		replace content_main
+	{% endblock %}
+</body>
+</html>

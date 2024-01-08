@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Pure Django Form -->
+<form action="." method="POST">    
+	{% csrf_token %}
+	{{ form.as_p }}      <!-- p是html的p标签 -->
+	<!-- <input type="text" name="title" placeholder="Your title"/>   <! -- name不同，将会产生巨大的差异 --> 
+	<input type="submit" value="Save" />	
+</form>
+
+
+<!-- method中GET是默认的方法，单纯使用GET可以append到URL，但是不能改变后端数据库。而action就完全改变URL到不同的地址了，这个可以自己测试一下 Raw HTML Form-->
+<!-- <form action="." method="POST">    
+	{% csrf_token %}
+	<! -- {{ form.as_p }} -- >
+	<input type="text" name="title" placeholder="Your title"/>   <! -- name不同，将会产生巨大的差异 -- >
+	<input type="submit" value="Save" />	
+</form> -->
+
+<!-- 测试一下action，太神奇了！！  
+	0）GET 请求意味着我可以访问任何一个网址，为了在后端保存信息，我们使用POST，就像POST一封信给某人一样。实际上GET和POST就像信息给我还是给别人的区别。
+	1）从中我们也学到了一些东西，该操作会将表单发送到我输入的任何网址，但是改成POST就会报错。
+	2）action='.'默认会转到当前网址
+	3）为了解决CSRF verification failed. Request aborted. CSRF token missing.的问题，我们需要加上{% csrf_token %}
+	4）action="." method="POST" 加上csrf_token后成功运行了，但是数据似乎消失了，
+
+<form action="https://www.google.com/search" method="GET">    
+
+	<input type="text" name="q" placeholder="Your search"/>   name不同，将会产生巨大的差异 name 不能是title
+	<input type="submit" value="Save" />	
+</form>
+-->
+{% endblock %}
