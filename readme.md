@@ -908,7 +908,7 @@ Or in Python code:
 url = reverse('myapp:article-detail', args=[article_id])
 ```
 
-## Class Based Views - ListView,DetailView,CreateView and UpdateView,DeleteView
+## Class Based Views - ListView DetailView CreateView and UpdateView DeleteView
 The code in the repository already does a good job of illustrating the content of this example.
 To illustrate this better, let's go through another small example here.
 
@@ -1056,7 +1056,7 @@ Notice the .as_view() method call, which is necessary for class-based views.
 - __model__: By setting the model attribute, DetailView will automatically handle fetching the object from the database based on the primary key (pk) from the URL.
 - __template_name__: If you don’t set this attribute, Django will use the default naming scheme to look for a template (i.e., "<app name>/<model name>_detail.html").
 
-## Raw Detail,Raw List,Raw Create, Raw Update And Raw Delete Class Based View
+## Raw Detail Raw List Raw Create Raw Update And Raw Delete Class Based View
 Creating "raw" class-based views in Django involves extending Django's base view classes and implementing the required methods yourself, rather than using Django's generic views. This approach gives you more control over the behavior of the view. Let's go through examples of creating raw DetailView, ListView, and CreateView.
 
 #### Raw Detail Class-Based View
