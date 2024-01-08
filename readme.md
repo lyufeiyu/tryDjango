@@ -1,5 +1,6 @@
-[TOC]
-
+- [Preface](#preface)
+- [Installing to Get Started](#installing-to-get-started)
+- [Setup your Virtual Environment for Django](#setup-your-virtual-environment-for-django)
 ## Preface
 I am studying a basic Django course on YouTube, and the course link is https://www.youtube.com/watch?v=F5mRW0jo-U4&t=375s. This GitHub repository contains the code I have written while learning the course, and the notes are written after I completed the course. The purpose of this repository is twofold: first, to document the key points of the course, and second, to provide notes to friends who are also learning the course so that they can learn quickly.
 ## Installing to Get Started
